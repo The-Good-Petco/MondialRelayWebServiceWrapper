@@ -1,8 +1,8 @@
 <?php
 
-namespace DansMaCulotte\MondialRelay;
+namespace MondialRelayWebServiceWrapper\MondialRelay;
 
-use DansMaCulotte\MondialRelay\Exceptions\CoordinateFormatException;
+use MondialRelayWebServiceWrapper\MondialRelay\Exceptions\CoordinateFormatException;
 
 class CoordinateFormatter
 {

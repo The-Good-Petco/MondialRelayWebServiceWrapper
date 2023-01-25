@@ -1,10 +1,10 @@
 <?php
 
-namespace DansMaCulotte\MondialRelay\Tests;
+namespace MondialRelayWebServiceWrapper\MondialRelay\Tests;
 
-use DansMaCulotte\MondialRelay\DeliveryChoice;
-use DansMaCulotte\MondialRelay\Exceptions\Exception;
-use DansMaCulotte\MondialRelay\Resources\PickupPoint;
+use MondialRelayWebServiceWrapper\MondialRelay\DeliveryChoice;
+use MondialRelayWebServiceWrapper\MondialRelay\Exceptions\Exception;
+use MondialRelayWebServiceWrapper\MondialRelay\Resources\PickupPoint;
 
 class DeliveryChoiceTest extends TestCase
 {
@@ -204,4 +204,32 @@ class DeliveryChoiceTest extends TestCase
         $this->expectExceptionObject(Exception::noPickupPoint('062049'));
         $delivery->findPickupPointByCode('FR', '062049');
     }
+
+    public function testSearchZipcode()
+    {
+        $mockedPickupPoint = $this->pickupPointMock();
+
+        $mockedPickupPointsResult = new \stdClass();
+        $mockedPickupPointsResult->STAT = '0';
+        $mockedPickupPointsResult->PointsRelais = new \stdClass();
+        $mockedPickupPointsResult->PointsRelais->PointRelais_Details = [
+            $mockedPickupPoint,
+        ];
+
+        $mockedResult = new \stdClass();
+        $mockedResult->WSI4_PointRelais_RechercheResult = $mockedPickupPointsResult;
+
+        $this->mondialRelayWSDL
+            ->expects($this->any())
+            ->method('WSI4_PointRelais_Recherche')
+            ->willReturn($mockedResult);
+
+        $delivery = new DeliveryChoice($this->credentials);
+        $delivery->soapClient = $this->mondialRelayWSDL;
+
+        $result = $delivery->findPickupPointByCode('FR', '062049');
+
+        $this->assertInstanceOf(PickupPoint::class, $result);
+    }
+
 }

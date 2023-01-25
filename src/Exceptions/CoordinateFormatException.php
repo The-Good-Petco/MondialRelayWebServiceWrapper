@@ -1,6 +1,6 @@
 <?php
 
-namespace DansMaCulotte\MondialRelay\Exceptions;
+namespace MondialRelayWebServiceWrapper\MondialRelay\Exceptions;
 
 use Exception;
 

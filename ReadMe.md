@@ -1,11 +1,5 @@
 # Mondial Relay Web Services PHP SDK
 
-[![Latest Version](https://img.shields.io/packagist/v/DansMaCulotte/mondialrelay-php.svg?style=flat-square)](https://packagist.org/packages/dansmaculotte/mondialrelay-php)
-[![Total Downloads](https://img.shields.io/packagist/dt/DansMaCulotte/mondialrelay-php.svg?style=flat-square)](https://packagist.org/packages/dansmaculotte/mondialrelay-php)
-[![Build Status](https://img.shields.io/travis/DansMaCulotte/mondialrelay-php/master.svg?style=flat-square)](https://travis-ci.org/dansmaculotte/mondialrelay-php)
-[![Quality Score](https://img.shields.io/scrutinizer/g/DansMaCulotte/mondialrelay-php.svg?style=flat-square)](https://scrutinizer-ci.com/g/dansmaculotte/mondialrelay-php)
-[![Code Coverage](https://img.shields.io/coveralls/github/DansMaCulotte/mondialrelay-php.svg?style=flat-square)](https://coveralls.io/github/dansmaculotte/mondialrelay-php)
-
 > This library aims to facilitate the usage of Mondial Relay Web Services
 
 ## Services
@@ -19,12 +13,6 @@
 - PHP 7.4
 - Soap Extension
 
-You can install the package via composer:
-
-``` bash
-composer require dansmaculotte/mondialrelay-php
-```
-
 ## Usage
 
 [MondialRelay Documentation](https://www.mondialrelay.fr/media/108937/Solution-Web-Service-V5.6.pdf)
@@ -32,7 +20,7 @@ composer require dansmaculotte/mondialrelay-php
 #### Find pickup points
 
 ```php
-use DansMaCulotte\MondialRelay\DeliveryChoice;
+use MondialRelayWebServiceWrapper\MondialRelay\DeliveryChoice;
 
 $delivery = new DeliveryChoice(
     [
@@ -49,7 +37,7 @@ print_r($result);
 #### Find pickup points by code
 
 ```php
-use DansMaCulotte\MondialRelay\DeliveryChoice;
+use MondialRelayWebServiceWrapper\MondialRelay\DeliveryChoice;
 
 $delivery = new DeliveryChoice(
     [

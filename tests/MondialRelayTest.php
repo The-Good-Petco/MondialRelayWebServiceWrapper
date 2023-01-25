@@ -1,9 +1,9 @@
 <?php
 
-namespace DansMaCulotte\MondialRelay\Tests;
+namespace MondialRelayWebServiceWrapper\MondialRelay\Tests;
 
-use DansMaCulotte\MondialRelay\Exceptions\Exception;
-use DansMaCulotte\MondialRelay\MondialRelay;
+use MondialRelayWebServiceWrapper\MondialRelay\Exceptions\Exception;
+use MondialRelayWebServiceWrapper\MondialRelay\MondialRelay;
 
 class MondialRelayTest extends TestCase
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace DansMaCulotte\MondialRelay\Resources;
+namespace MondialRelayWebServiceWrapper\MondialRelay\Resources;
 
 class PickupPoint
 {

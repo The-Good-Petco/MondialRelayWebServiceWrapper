@@ -1,8 +1,8 @@
 <?php
 
-namespace DansMaCulotte\MondialRelay;
+namespace MondialRelayWebServiceWrapper\MondialRelay;
 
-use DansMaCulotte\MondialRelay\Exceptions\Exception;
+use MondialRelayWebServiceWrapper\MondialRelay\Exceptions\Exception;
 use Laminas\Soap\Client as SoapClient;
 
 class MondialRelay

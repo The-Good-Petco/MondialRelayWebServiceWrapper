@@ -1,9 +1,9 @@
 <?php
 
-namespace DansMaCulotte\MondialRelay;
+namespace MondialRelayWebServiceWrapper\MondialRelay;
 
-use DansMaCulotte\MondialRelay\Exceptions\Exception;
-use DansMaCulotte\MondialRelay\Resources\PickupPoint;
+use MondialRelayWebServiceWrapper\MondialRelay\Exceptions\Exception;
+use MondialRelayWebServiceWrapper\MondialRelay\Resources\PickupPoint;
 
 /**
  * Implementation of Delivery Choice Web Service

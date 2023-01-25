@@ -1,6 +1,6 @@
 <?php
 
-namespace DansMaCulotte\MondialRelay\Tests;
+namespace MondialRelayWebServiceWrapper\MondialRelay\Tests;
 
 use PHPUnit\Framework\TestCase as BaseTestCase;
 

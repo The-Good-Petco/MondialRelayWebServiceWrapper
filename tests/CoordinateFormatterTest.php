@@ -1,8 +1,8 @@
 <?php
 
-namespace DansMaCulotte\MondialRelay\Tests;
+namespace MondialRelayWebServiceWrapper\MondialRelay\Tests;
 
-use DansMaCulotte\MondialRelay\CoordinateFormatter;
+use MondialRelayWebServiceWrapper\MondialRelay\CoordinateFormatter;
 use PHPUnit\Framework\TestCase;
 
 /*
