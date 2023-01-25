@@ -1,5 +1,5 @@
 {
-    "name": "dansmaculotte/mondialrelay-php",
+    "name": "The-Good-Petco/MondialRelayWebServiceWrapper",
     "description": "PHP SDK for MondialRelay Web Services",
     "type": "library",
     "license": "MIT",
@@ -7,7 +7,7 @@
         "mondialrelay",
         "mondialrelay-webservices"
     ],
-    "homepage": "https://github.com/DansMaCulotte/mondialrelay-php",
+    "homepage": "https://github.com/The-Good-Petco/MondialRelayWebServiceWrapper",
     "authors": [
         {
             "name": "Martin Potel",
@@ -24,12 +24,12 @@
     ],
     "autoload": {
         "psr-4": {
-            "DansMaCulotte\\MondialRelay\\": "src/"
+            "MondialRelayWebServiceWrapper\\MondialRelay\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "DansMaCulotte\\MondialRelay\\Tests\\": "tests/"
+            "MondialRelayWebServiceWrapper\\MondialRelay\\Tests\\": "tests/"
         }
     },
     "require": {
