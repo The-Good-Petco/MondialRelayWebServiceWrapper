@@ -113,4 +113,36 @@ class DeliveryChoice extends MondialRelay
 
         return $points[0];
     }
+
+    /**
+     * @param string $country ISO 3166 country code
+     * @param string|null $city City name
+     * @param string|null $zipCode Zip code
+     * @return array
+     * @throws Exception
+     */
+    public function searchZipcode(
+        string $country,
+        string $city,
+        int $nbResults = 10
+    ): array  {
+
+        $options = [
+            'Pays' => $country,
+            'Ville' => $city,
+            'NbResult' => $nbResults,
+        ];
+
+        $result = $this->soapExec(
+            'WSI2_RechercheCP',
+            $options
+        );
+
+        $errorCode = $result->WSI2_RechercheCPResult->STAT;
+        if ($errorCode !== '0') {
+            throw Exception::requestError($errorCode);
+        }
+
+        return $result->WSI2_RechercheCPResult->Liste->Commune ?? [];
+    }
 }
