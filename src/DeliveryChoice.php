@@ -143,6 +143,12 @@ class DeliveryChoice extends MondialRelay
             throw Exception::requestError($errorCode);
         }
 
-        return $result->WSI2_RechercheCPResult->Liste->Commune ?? [];
+        $result = $result->WSI2_RechercheCPResult->Liste->Commune;
+        if (is_array($result) === false) {
+            return [
+                $result
+            ];
+        }
+        return $result;
     }
 }
