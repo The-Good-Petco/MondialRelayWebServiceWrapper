@@ -33,9 +33,9 @@
         }
     },
     "require": {
-        "php": "^7.4||^8.0",
+        "php": "^8.2",
         "ext-soap": "*",
-        "laminas/laminas-soap": "^2.10"
+        "laminas/laminas-soap": "^2.14"
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^3.7",
