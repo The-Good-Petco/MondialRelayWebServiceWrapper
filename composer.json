@@ -1,5 +1,5 @@
 {
-    "name": "The-Good-Petco/MondialRelayWebServiceWrapper",
+    "name": "the-good-petco/mondialrelay-webservice-wrapper",
     "description": "PHP SDK for MondialRelay Web Services",
     "type": "library",
     "license": "MIT",
@@ -33,7 +33,7 @@
         }
     },
     "require": {
-        "php": "~8.1.0 || ~8.2.0 || ~8.3.0",
+        "php":"^8.2",
         "ext-soap": "*",
         "laminas/laminas-soap": "^2.10"
     },
